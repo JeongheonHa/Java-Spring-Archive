@@ -1,4 +1,4 @@
-package ch04_loop;
+package ch04.loop;
 
 public class ForEx {
 

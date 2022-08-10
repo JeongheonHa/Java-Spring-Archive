@@ -1,4 +1,4 @@
-package ch02_variable;
+package ch02.variable;
 
 import java.util.Scanner;
 

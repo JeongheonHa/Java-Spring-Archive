@@ -1,4 +1,4 @@
-package ch06_class;
+package ch06.class_;
 
 class Data {int x;}
 public class ReferenceReturn {

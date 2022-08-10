@@ -1,4 +1,4 @@
-package ch06_overloading;
+package ch06.overloading;
 
 public class VarArgsEx {
 

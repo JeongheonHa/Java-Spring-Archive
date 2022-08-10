@@ -1,4 +1,4 @@
-package ch05_array;
+package ch05.array;
 
 public class MultiDimensionalArrayEx {
 

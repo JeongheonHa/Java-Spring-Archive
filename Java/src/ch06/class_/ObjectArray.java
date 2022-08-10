@@ -1,4 +1,4 @@
-package ch06_class;
+package ch06.class_;
 
 public class ObjectArray {
 

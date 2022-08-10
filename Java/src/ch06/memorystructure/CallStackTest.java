@@ -1,4 +1,4 @@
-package ch06_memorystructure;
+package ch06.memorystructure;
 
 public class CallStackTest {
 

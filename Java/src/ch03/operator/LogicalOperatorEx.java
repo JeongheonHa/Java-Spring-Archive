@@ -1,4 +1,4 @@
-package ch03_operator;
+package ch03.operator;
 
 import java.util.*;
 
