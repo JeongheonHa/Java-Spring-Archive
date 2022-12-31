@@ -16,3 +16,8 @@
 📚 김영한 님의 "스프링 핵심 원리 - 기본편" 강의를 보고 공부한 내용입니다. <br>
 실습 예제 : <https://github.com/JeongheonHa/Java-Spring-Archive/tree/main/core> <br>
 내용 정리 : <https://github.com/JeongheonHa/TIL/tree/main/Spring/Spring-Core>
+
+- servlet <br>
+📚 김영한 님의 "스프링 MVC 1편 - 백엔드 웹 개발 핵심 기술" 강의를 보고 공부한 내용입니다. <br>
+실습 예제 : <https://github.com/JeongheonHa/Java-Spring-Archive/tree/main/servlet>
+내용 정리 : <https://github.com/JeongheonHa/TIL/tree/main/Spring/spring-mvc>
