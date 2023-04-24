@@ -1,0 +1,13 @@
+jpabook/model/entity/DeliveryStatus.class
+jpabook/model/entity/Category.class
+jpabook/model/entity/OrderItem.class
+jpabook/model/entity/Delivery.class
+jpabook/model/entity/item/Item.class
+jpabook/model/entity/OrderStatus.class
+jpabook/model/entity/item/Movie.class
+jpabook/model/entity/item/Book.class
+jpabook/model/entity/Order.class
+jpabook/model/Main.class
+jpabook/model/entity/Member.class
+jpabook/model/entity/item/Album.class
+jpabook/model/entity/Address.class
