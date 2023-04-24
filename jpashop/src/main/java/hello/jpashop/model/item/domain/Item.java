@@ -1,5 +1,6 @@
 package hello.jpashop.model.item.domain;
 
+import hello.jpashop.model.item.exception.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,4 +23,17 @@ public abstract class Item {
 
     private int stockQuantity;
 
+    public void addStock(int quantity) {
+        this.stockQuantity += quantity;
+    }
+
+    public void popStock(int quantity) {
+        int restStock = stockQuantity - quantity;
+
+        if (restStock < 0) {
+            throw new NotEnoughStockException("재고가 부족합니다.");
+        }
+
+        this.stockQuantity = restStock;
+    }
 }
