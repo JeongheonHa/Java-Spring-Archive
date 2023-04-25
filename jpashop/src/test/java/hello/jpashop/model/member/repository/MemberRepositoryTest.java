@@ -19,7 +19,7 @@ class MemberRepositoryTest {
     @Transactional
     void testMember() {
         //given
-        Member member = new Member("member1");
+        Member member = new Member("member1", null);
 
         //when
         Long savedId = memberRepository.save(member);

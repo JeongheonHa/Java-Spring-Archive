@@ -22,7 +22,7 @@ class MemberServiceTest {
     @Test
     void 회원가입() {
         //given
-        Member member = new Member("member1");
+        Member member = new Member("member1", null);
 
         //when
         Long savedId = memberService.join(member);
@@ -34,8 +34,8 @@ class MemberServiceTest {
     @Test
     void 중복_회원_예외() {
         //given
-        Member member1 = new Member("kim");
-        Member member2 = new Member("kim");
+        Member member1 = new Member("kim", null);
+        Member member2 = new Member("kim", null);
 
         //when
         memberService.join(member1);
