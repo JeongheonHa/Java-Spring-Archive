@@ -3,13 +3,11 @@ package hello.jpashop.model.categoryitem.domain;
 import hello.jpashop.model.category.domain.Category;
 import hello.jpashop.model.item.domain.Item;
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
-@Setter
 public class CategoryItem {
 
     @Id
@@ -22,4 +20,12 @@ public class CategoryItem {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Item item;
+
+    protected CategoryItem() {
+    }
+
+    public CategoryItem(Category category, Item item) {
+        this.category = category;
+        this.item = item;
+    }
 }

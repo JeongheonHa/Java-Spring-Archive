@@ -2,7 +2,6 @@ package hello.jpashop.model.category.domain;
 
 import hello.jpashop.model.item.domain.Item;
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -10,7 +9,6 @@ import java.util.List;
 
 @Entity
 @Getter
-@Setter
 public class Category {
 
     @Id @GeneratedValue
@@ -24,10 +22,22 @@ public class Category {
     private Category parent;
 
     @OneToMany(mappedBy = "parent")
-    private List<Category> child = new ArrayList<>();
+    private List<Category> children = new ArrayList<>();
 
-    public void addChildCategory(Category category) {
-        this.child.add(category);
-        category.setParent(this);
+    protected Category() {
+    }
+
+    public Category(String name, Category parent) {
+        this.name = name;
+        this.parent = parent;
+    }
+
+    private void addParent(Category parent) {
+        this.parent = parent;
+    }
+
+    public void addChildCategory(Category child) {
+        this.children.add(child);
+        child.addParent(this);
     }
 }

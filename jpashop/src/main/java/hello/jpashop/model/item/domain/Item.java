@@ -1,8 +1,8 @@
 package hello.jpashop.model.item.domain;
 
 import hello.jpashop.model.item.exception.NotEnoughStockException;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn
 @Getter
-@Setter
 public abstract class Item {
 
     @Id @GeneratedValue
@@ -22,6 +21,15 @@ public abstract class Item {
     private int price;
 
     private int stockQuantity;
+
+    protected Item() {
+    }
+
+    public Item(String name, int price, int stockQuantity) {
+        this.name = name;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+    }
 
     public void addStock(int quantity) {
         this.stockQuantity += quantity;
