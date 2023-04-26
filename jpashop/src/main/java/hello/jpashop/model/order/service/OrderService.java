@@ -6,6 +6,7 @@ import hello.jpashop.model.item.repository.ItemRepository;
 import hello.jpashop.model.member.domain.Member;
 import hello.jpashop.model.member.repository.MemberRepository;
 import hello.jpashop.model.order.domain.Order;
+import hello.jpashop.model.order.domain.OrderSearch;
 import hello.jpashop.model.order.repository.OrderRepository;
 import hello.jpashop.model.orderitem.domain.OrderItem;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -46,7 +48,10 @@ public class OrderService {
     public void cancelOrder(Long orderId) {
 
         Order order = orderRepository.findById(orderId);
-
         order.cancel();
+    }
+
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAll(orderSearch);
     }
 }
