@@ -1,8 +1,8 @@
 package hello.jpashop.web.controller.member;
 
 import hello.jpashop.model.member.domain.Member;
-import hello.jpashop.model.member.domain.vo.Address;
 import hello.jpashop.model.member.dto.MemberSignUpRequest;
+import hello.jpashop.model.member.service.MemberAssembler;
 import hello.jpashop.model.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -33,7 +33,7 @@ public class MemberController {
             return "signup";
         }
 
-        Member member = request.toEntity(request.getName(), request.getCity(), request.getStreet(), request.getZipcode());
+        Member member = MemberAssembler.toEntity(request);
         memberService.join(member);
         return "redirect:/";
     }

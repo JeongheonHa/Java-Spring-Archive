@@ -1,6 +1,7 @@
 package hello.jpashop.model.member.service;
 
 import hello.jpashop.model.member.domain.Member;
+import hello.jpashop.model.member.dto.UpdateMemberRequest;
 import hello.jpashop.model.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,12 @@ public class MemberService {
 
     public Member findById(Long memberId) {
         return memberRepository.findById(memberId);
+    }
+
+    @Transactional
+    public void update(Long id, UpdateMemberRequest updateMemberRequest) {
+        Member findMember = memberRepository.findById(id);
+        findMember.updateName(updateMemberRequest.getName());
     }
 
     private void validateDuplicateMember(String name) {

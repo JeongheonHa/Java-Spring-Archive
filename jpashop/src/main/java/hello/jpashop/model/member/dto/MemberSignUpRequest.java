@@ -17,11 +17,4 @@ public class MemberSignUpRequest {
     private String city;
     private String street;
     private String zipcode;
-
-
-    public Member toEntity(String name, String city, String street, String zipcode) {
-        Address address = new Address(city, street, zipcode);
-        Member member = new Member(name, address);
-        return member;
-    }
 }
